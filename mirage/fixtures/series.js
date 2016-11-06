@@ -1,0 +1,7 @@
+export default [
+{id: 1, art: [ fanart: [ {  index = 0, url:'http://10.1.1.100:8111/JMMServerRest/GetImage/7/255' } ] ], url: 'url-test', type: 'show', titles: [ {type: 'main', lang: "jap", title: 'Title1'} ], summary: 'very interesting summary', year: '2001', air: '01-01-2001', size: '1', viewed: '0', season: '1', childcount: '1', rating: '8.00', roles: [ { role: 'role', roledesc: 'roledesc', rolepic: '', actor: 'actor', actorpic: '' } ], tags: [{tag: 'tag'}, {tag: 'tag2'}]}
+,
+{id: 1, art: [ fanart: [ {  index = 0, url:'http://10.1.1.100:8111/JMMServerRest/GetImage/7/255' } ] ], url: 'url-test', type: 'show', titles: [ {type: 'main', lang: "jap", title: 'Title2'} ], summary: 'very interesting summary', year: '2001', air: '01-01-2001', size: '1', viewed: '0', season: '1', childcount: '1', rating: '8.00', roles: [ { role: 'role', roledesc: 'roledesc', rolepic: '', actor: 'actor', actorpic: '' } ], tags: [{tag: 'tag'}, {tag: 'tag2'}]}
+,
+{id: 1, art: [ fanart: [ {  index = 0, url:'http://10.1.1.100:8111/JMMServerRest/GetImage/7/255' } ] ], url: 'url-test', type: 'show', titles: [ {type: 'main', lang: "jap", title: 'Title3'} ], summary: 'very interesting summary', year: '2001', air: '01-01-2001', size: '1', viewed: '0', season: '1', childcount: '1', rating: '8.00', roles: [ { role: 'role', roledesc: 'roledesc', rolepic: '', actor: 'actor', actorpic: '' } ], tags: [{tag: 'tag'}, {tag: 'tag2'}]}
+];
