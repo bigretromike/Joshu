@@ -7,6 +7,18 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.route('serie', function() {
+    this.route('show');
+  });
+  this.route('episode', function() {
+    this.route('show');
+  });
+  this.route('file', function() {
+    this.route('show');
+  });
+  this.route('filter', function() {
+    this.route('show');
+  });
 });
 
 export default Router;
