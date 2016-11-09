@@ -1,0 +1,39 @@
+body {
+	padding-top: 60px;
+	padding-bottom: 70px;
+}
+
+.ratio {
+    position:relative;
+    width: 50%;
+    height: 0;
+    padding-bottom: 50% ;
+    background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+}
+
+.col-center {
+	float:none;
+	margin: 0 auto;
+}
+
+.circle-base {
+	border-radius: 50%;
+}
+
+.navbar-default {
+	background-color: #2C3E50;
+	border-color: #FFFFFF;
+	color: #FFFFFF;
+}
+
+.navbar-default .navbar-brand {
+	color: #FFFFFF;
+}
+
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+	color: #18DB9C;
+	background-color: transparent;
+}

@@ -24,17 +24,17 @@ export default function() {
     http://www.ember-cli-mirage.com/docs/v0.2.x/shorthands/
   */
 
-  this.namespace = 'api';
-  
-  this.get('/series');
-  this.get('/series/:id');
-  
-  this.get('/filters');
-  this.get('/filters/:id');
+  // this.namespace = 'api';
 
-  this.get('/episodes');
-  this.get('/episodes/:id');
+  this.get('/api/series');
+  this.get('/api/series/:id');
 
-  this.get('/files');
-  this.get('/files/:id');
+  this.get('/api/filters');
+  this.get('/api/filters/:id');
+
+  this.get('/api/episodes');
+  this.get('/api/episodes/:id');
+
+  this.get('/api/files');
+  this.get('/api/files/:id');
 }

@@ -1,4 +1,8 @@
-<div>
-<img src="{{filter.art}}" width=200 hight=200 alt="">
-<h3>{{filter.title}} id: {{filter.id}}</h3>
-</div>
+{{#link-to "filter.show" filter.id}}
+	<div class="circle-base ratio col-center" style="background-image:url('{{filter.art}}')" />
+	<div class="text-center col-center">
+		<h3>
+			{{filter.title}}
+		</h3>
+	</div>
+{{/link-to}}

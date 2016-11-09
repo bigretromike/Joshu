@@ -8,16 +8,16 @@ const Router = Ember.Router.extend({
 
 Router.map(function() {
   this.route('serie', function() {
-    this.route('show');
+    this.route('show', { path: '/:serie_id' });
   });
   this.route('episode', function() {
-    this.route('show');
+    this.route('show', { path: '/:episode_id' });
   });
   this.route('file', function() {
-    this.route('show');
+    this.route('show', { path: '/:file_id' });
   });
   this.route('filter', function() {
-    this.route('show');
+    this.route('show', { path: '/:filter_id' });
   });
 });
 

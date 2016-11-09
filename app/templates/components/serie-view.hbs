@@ -1,5 +1,4 @@
 <div>
-<img src="" width=200 hight=200 alt="">
-<h3>{{serie.title}} id: {{serie.id}}</h3>
+<h3>{{#link-to "serie.show" serie.id}}{{serie.title}}{{/link-to}} id: {{serie.id}}</h3>
 Summary: {{serie.summary}}
 </div>

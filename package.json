@@ -1,7 +1,7 @@
 {
   "name": "joshu",
-  "version": "0.0.0",
-  "description": "Small description for joshu goes here",
+  "version": "0.1.0",
+  "description": "joshu is joshu",
   "private": true,
   "directories": {
     "doc": "doc",
