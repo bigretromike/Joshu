@@ -1,8 +1,13 @@
+<div class="filter-box">
 {{#link-to "filter.show" filter.id}}
-	<div class="circle-base ratio col-center" style="background-image:url('{{filter.art}}')" />
+	{{#if filter.art.fanart.0.url}}
+		<div class="circle-base ratio col-center shadow-box zoom-box" style="background-image:url('{{filter.art.fanart.0.url}}')" />
+	{{else}}
+		<div class="circle-base ratio col-center shadow-box zoom-box" style="background-image:url('{{filter.art.thumb.0.url}}')" />
+	{{/if}}
 	<div class="text-center col-center">
-		<h3>
-			{{filter.title}}
-		</h3>
+		<h4>{{filter.name}}</h4>
+		<h5>{{filter.size}}</h5>
 	</div>
 {{/link-to}}
+</div>
