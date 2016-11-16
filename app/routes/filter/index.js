@@ -1,8 +1,9 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-		model() {
-						return this.get('store').findAll('filter');
-					
-		}
+	model() {
+		var filters = this.store.findAll('filter');
+		console.log(filters);
+		return filters;
+	}
 });
