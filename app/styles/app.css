@@ -46,9 +46,13 @@ body {
 }
 
 .navbar-default {
-	background-color: #AC3E50;
+	background-color: #011A27;
 	border-color: #FFFFFF;
 	color: #AAAAAA;
+}
+.navbar-inverse  {
+	background-color: #063852;
+	color: #FFFFFF;
 }
 
 .navbar-default .navbar-brand {

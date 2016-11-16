@@ -7,5 +7,5 @@ export default DS.Model.extend({
 		viewed: DS.attr(),
 		url: DS.attr(),
 		type: DS.attr(),
-		groups: DS.attr()
+		groups: DS.attr(),
 });

@@ -1,6 +1,6 @@
 import DS from 'ember-data';
 
-export default DS.JSONAPISerializer.extend({
+export default DS.RESTSerializer.extend({
 	modelNameFromPayloadKey(key) {
 	// if payload model name is 'series', use 'serie'
 		if (key === 'series') { 

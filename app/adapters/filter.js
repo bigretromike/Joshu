@@ -6,10 +6,4 @@ export default ApplicationAdapter.extend({
 		console.log(`URL = ${url}`);
         return this.ajax(url, 'GET');
     },
-	normalizePayload: function(payload) {
-		console.log("payload");
-		return {
-			'filters': payload
-		};
-	},
 });
