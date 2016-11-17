@@ -19,6 +19,8 @@ Router.map(function() {
   this.route('filter', function() {
     this.route('show', { path: '/:filter_id' });
   });
+  this.route('login');
+  this.route('settings');
 });
 
 export default Router;

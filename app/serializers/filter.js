@@ -1,7 +1,5 @@
-//import ApplicationSerializer from './application';
-
-//export default ApplicationSerializer.extend({
 import DS from 'ember-data';
+import Ember from 'ember';
 
 export default DS.RESTSerializer.extend(
 {
