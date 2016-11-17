@@ -9,7 +9,7 @@ export default DS.RESTSerializer.extend(
 				//console.log(payload);
 				var data = [];
 				payload.forEach(
-					function(item, index, enumerable) 
+					function(item, index) 
 					{
 						var ob = {};
 						Ember.set(ob, 'id', item.id);

@@ -6,7 +6,7 @@ export default DS.RESTSerializer.extend(
 	normalizeFindAllResponse(store, type, payload){
 		var data = [];
 		payload.forEach(
-				function(item, index, enumerable) 
+				function(item, index) 
 				{
 					var ob = {};
 					Ember.set(ob, 'id', item.id);
