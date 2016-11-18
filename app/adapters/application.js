@@ -7,8 +7,9 @@ export default DS.RESTAdapter.extend(DataAdapterMixin, {
 	namespace: 'api',
 	
 	authorizer: 'authorizer:application',
+//	authorizer: 'authorizer:token',
 	
 	headers: {
-		"Content-Type": "application/json", 
-    }
+	    "Content-Type": "application/json"
+	} 
 });
