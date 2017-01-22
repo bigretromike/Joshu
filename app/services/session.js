@@ -7,10 +7,13 @@ export default ESASession.extend({
   store: Ember.inject.service(),
 
   currentUser: Ember.computed('isAuthenticated', function() {
-    if (this.get('isAuthenticated')) {
+		  if (this.get('isAuthenticated')) {
       const promise = this.get('store').queryRecord('user', {});
-      return DS.PromiseObject.create({ promise: promise });
-    }
-  })
+      return DS.PromiseObject.create({ promise: promise  });
+    
+		  }
+  
+		  })
 
-});
+
+		});

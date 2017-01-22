@@ -17,7 +17,7 @@
 		{{#link-to "episode" tagName="li"}}<a href={{view.href}}>Episode</a>{{/link-to}}
 		{{#link-to "file" tagName="li"}}<a href={{view.href}}>File</a>{{/link-to}}
 		{{#link-to "settings" tagName="li"}}<a href={{view.href}}>Settings</a>{{/link-to}}
-		{{#if authManager.isAuthenticated}}
+		{{#if session.isAuthenticated}}
 			<li><a {{action 'invalidateSession'}}>Logout</a></li>
 		{{else}}
 			{{#link-to "login" tagName="li"}}<a href={{view.href}}>Login</a>{{/link-to}}

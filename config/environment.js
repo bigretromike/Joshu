@@ -18,7 +18,14 @@ module.exports = function(environment) {
       // when it is created
     }
   };
-
+  
+  ENV['simple-auth'] = {
+    store: 'simple-auth-session-store:local-storage',
+    authorizer: 'authorizer:apipapi',
+    crossOrginWhitelist: ['http://localhost:4200/'],
+    routeAfterAuthentication: '/index'
+  };
+  
   if (environment === 'development') {
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;
@@ -26,7 +33,7 @@ module.exports = function(environment) {
     // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
     // ENV.APP.LOG_VIEW_LOOKUPS = true;
 	ENV['ember-cli-mirage'] = {
-		enabled: true
+		enabled: false
 	};
   }
 
