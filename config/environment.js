@@ -19,11 +19,12 @@ module.exports = function(environment) {
     }
   };
   
-  ENV['simple-auth'] = {
-    store: 'simple-auth-session-store:local-storage',
+  ENV['ember-simple-auth'] = {
+    store: 'ember-simple-auth-session-store:local-storage',
     authorizer: 'authorizer:apipapi',
     crossOrginWhitelist: ['http://localhost:4200/'],
-    routeAfterAuthentication: '/index'
+    routeAfterAuthentication: '/',
+	routeIfAlreadyAuthenticated: '/'
   };
   
   if (environment === 'development') {

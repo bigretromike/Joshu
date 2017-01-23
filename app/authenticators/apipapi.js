@@ -1,35 +1,39 @@
 import Ember from 'ember';
 import Base from 'ember-simple-auth/authenticators/base';
+
 export default Base.extend({
-    tokenEndpoint: 'http://10.1.1.100:8111/api/auth',
-    restore: function(data) {
-    return new Ember.RSVP.Promise(function(resolve, reject) {
+    tokenEndpoint: 'http://127.0.0.1:8111/api/auth',
+    
+	restore(data) {
+		return new Ember.RSVP.Promise((resolve, reject) => {
 		    if (!Ember.isEmpty(data.token)) {
                 resolve(data);
-		} else {
+			} else {
                 reject();
-		}
-	});
+			}
+		});
     },
 
-authenticate: function(options) {
-return new Ember.RSVP.Promise((resolve, reject) => {
+authenticate(username, password) {
+	return new Ember.RSVP.Promise((resolve, reject) => {
+		console.log("user:" + username);
+		console.log("pass:" + password);
 		Ember.$.ajax({
 		    url: this.tokenEndpoint,
 		    type: 'POST',
 		    data: JSON.stringify({
-                	user: options.identification,
-                	pass: options.password,
-			device: "joshu"
+                	user: username,
+                	pass: password,
+					device: "joshu"
 		    }),
-            	    contentType: 'application/json;charset=utf-8',
-            	    dataType: 'json'
+			contentType: 'application/json;charset=utf-8',
+            dataType: 'json'
 		}).then(function(response) {
 			Ember.run(function() {
 				console.log("apikey:" + response.apikey);
 				resolve({
-                    		    token: response.apikey,
-                    		    apikey: response.apikey
+                    token: response.apikey,
+					apikey: response.apikey
 				});
 			});
 		}, function(xhr, status, error) {
@@ -43,6 +47,7 @@ return new Ember.RSVP.Promise((resolve, reject) => {
 
 invalidate: function() {
         console.log('invalidate...');
+		alert("ivalidating in proress");
         return Ember.RSVP.resolve();
 	    }
 		});

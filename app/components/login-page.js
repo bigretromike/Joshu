@@ -5,8 +5,13 @@ export default Ember.Component.extend({
 	session: Ember.inject.service('session'),
 	actions: {
 		authenticate: function() {
-			var credentials = this.getProperties('identification', 'password');
-			this.get('session').authenticate('authenticator:apipapi',credentials).catch((message) => {
+			let { username, password } = this.getProperties('username', 'password');
+			console.log("username = " + username);
+			console.log("password = " + password);
+			if (typeof password === "undefined") {
+				password = '';
+			}
+			this.get('session').authenticate('authenticator:apipapi', username, password).catch((message) => {
 			    this.set('errorMessage', message);
 			});
 		}
